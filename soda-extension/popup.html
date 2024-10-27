@@ -2,9 +2,26 @@
 <html>
 <head>
   <title>Scraper</title>
+<style>
+    .loading {
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
 </head>
 <body>
   <h3>Page Scraper</h3>
+  <p id="chatGptRes"></p>
   <button id="scrape-btn">Scrape Page</button>
   <script src="popup.js"></script>
 </body>
