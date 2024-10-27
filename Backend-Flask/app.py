@@ -36,5 +36,5 @@ def summarize():
         ],
         model=model_name,
     )
-
+    print (response.choices[0].message.content)
     return jsonify({"summary": response.choices[0].message.content})

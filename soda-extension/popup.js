@@ -6,3 +6,10 @@ document.getElementById("scrape-btn").addEventListener("click", async () => {
     files: ["content.js"],
   });
 });
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  console.log("Message received in popup.js:", message);
+  if (message.extention) {
+    document.getElementById("chatGptRes").innerText = message.content;
+  }
+});
